@@ -45,11 +45,13 @@ export TEMP=/tmp
 export TMPDIR=/tmp
 
 
+git clone https://github.com/zjjxxlgb/pgsqlparser.git
+
 gzip -d pgsqlparser.gz
 
 cd pgsqlparser
 
-开始编译安装三把斧
+开始编译安装
 
 ./configure --prefix=/home/pgsqlparser/pgsql/  --with-perl --with-python --with-libxml --with-libxslt
 
@@ -62,13 +64,13 @@ cd pgsqlparser
 /home/pgsqlparser/pgsql/bin/createdb mytestdb
 
 
-#语法检测
+语法检测
 
-postgres -D E:\pg\install\data <test.sql mytestdb 2>&1|grep "syntax error"
+postgres  <test.sql mytestdb 2>&1|grep "syntax error"
 
 备份表识别（alter,drop,truncate,delete,update)
 
-postgres -D E:\pg\install\data <test.sql mytestdb 2>&1|grep dbtablename
+postgres  <test.sql mytestdb 2>&1|grep dbtablename
 
 
 
