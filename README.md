@@ -1,1 +1,1 @@
-# pgsqlwatch
+# pgsqlparser
