@@ -61,7 +61,9 @@ chmod u+x configure
  make install
 
 
-mv pgdata.tar.gz /home/pgsqlparser/
+mv pgsqlparser/pgdata.tar.gz /home/pgsqlparser/
+
+cd ..
 
 tar -zxf pgdata.tar.gz
 
@@ -74,4 +76,4 @@ postgres  <test2.sql postgres 2>&1|grep 'FATAL'
 postgres  <test.sql postgres 2>&1|grep dbtablename
 
 
-
+ ![image](https://github.com/zjjxxlgb/pgsqlparser/blob/master/readme.JPG)
