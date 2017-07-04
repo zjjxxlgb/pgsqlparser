@@ -60,18 +60,18 @@ chmod u+x configure
  
  make install
 
-/home/pgsqlparser/pgsql/bin/initdb -D /home/pgsqlparser/pgdata
 
-/home/pgsqlparser/pgsql/bin/createdb mytestdb
+mv pgdata.tar.gz /home/pgsqlparser/
 
+tar -zxf pgdata.tar.gz
 
 语法检测
 
-postgres  <test.sql mytestdb 2>&1|grep "syntax error"
+postgres  <test2.sql postgres 2>&1|grep 'FATAL'
 
 备份表识别（alter,drop,truncate,delete,update)
 
-postgres  <test.sql mytestdb 2>&1|grep dbtablename
+postgres  <test.sql postgres 2>&1|grep dbtablename
 
 
 
