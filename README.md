@@ -47,11 +47,12 @@ export TMPDIR=/tmp
 
 git clone https://github.com/zjjxxlgb/pgsqlparser.git
 
-gzip -d pgsqlparser.gz
 
 cd pgsqlparser
 
 开始编译安装
+
+chmod u+x configure
 
 ./configure --prefix=/home/pgsqlparser/pgsql/  --with-perl --with-python --with-libxml --with-libxslt
 
