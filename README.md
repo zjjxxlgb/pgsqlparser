@@ -1,10 +1,10 @@
-## pgsqlparser
+# pgsqlparser
 
-#功能：
+##功能：
 
 定制postgres9.6源码，输入SQL文件进行SQL语法检查，并识别出哪些表有变更，提高SQL上线时备份的效率。
 
-#安装准备
+##安装准备
 ```Bash
 yum install -y perl-ExtUtils-Embed readline-devel zlib-devel pam-devel libxml2-devel libxslt-devel openldap-devel Python-devel gcc-c++   openssl-devel cmake
 
@@ -45,7 +45,7 @@ export TEMP=/tmp
 export TMPDIR=/tmp
 ```
 
-#开始编译安装
+##开始编译安装
 ```Bash
 git clone https://github.com/zjjxxlgb/pgsqlparser.git
 
@@ -65,11 +65,11 @@ cd ..
 
 tar -zxf pgdata.tar.gz
 ```
-#语法检测
+##语法检测
 ```Bash
 postgres  <test2.sql postgres 2>&1|grep 'FATAL'
 ```
-#备份表识别（alter,drop,truncate,delete,update)
+##备份表识别（alter,drop,truncate,delete,update)
 ```Bash
 postgres  <test.sql postgres 2>&1|grep dbtablename
 ```
