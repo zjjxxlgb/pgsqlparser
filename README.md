@@ -52,4 +52,4 @@ postgres  <test.sql postgres 2>&1|grep dbtablename
 ```
 
 
- ![image](https://github.com/zjjxxlgb/pgsqlparser/blob/master/readme.JPG)
+ ![image](readme.JPG)
